@@ -1,0 +1,32 @@
+{
+  "name": "1stapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "start": "electron .",
+      "build-mac": "electron-builder --mac --x64",
+      "build-win": "electron-builder --win --x64"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.2",
+    "electron-builder": "^22.8.1"
+  },
+  "build":{
+    "appId": "net.makitokatsube.app.1st",
+    "files": [
+      "package.json",
+      "package-lock.json",
+      "index.js",
+      "index.html"
+    ],
+    "mac":{
+      "target": "dmg"
+    },
+    "win":{
+      "target": "nsis"
+    }
+  }
+}
